@@ -1,0 +1,21 @@
+{
+    "name": "yob/mysql",
+    "description": "a php-mysql class",
+    "type": "library",
+    "require": {
+        "php": "^7.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "yob",
+            "email": "897960700@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Yob\\": "src/"
+        }
+    }
+}
