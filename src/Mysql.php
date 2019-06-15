@@ -2,7 +2,7 @@
 
 namespace Yob;
 /**
- * php-mysql 类
+ * yob-mysql 类
  */
 class Mysql
 {
@@ -85,16 +85,6 @@ class Mysql
 	public function get() {
 		$res = $this->_query();
 		return $res;
-		echo json_encode($res);exit;
-		if($res && count($res[0] == 1)) {
-			$column = explode('.', $this->_field);
-			$column = array_pop($column);
-			$result = array_column($res, $column);
-			return $result;
-		} else {
-			echo json_encode($res);exit;
-			return $res;
-		}
 	}
 
 	public function find() {
@@ -103,7 +93,6 @@ class Mysql
 		if (isset($res[0]) && $res[0]) {
 			return $res[0];
 		}
-
 		return [];
 	}
 
